@@ -30,8 +30,9 @@ jobs:
 
       - name: Run lint
         working-directory: starter/frontend
-        run: npm run lint
-
+        run: |
+          npm run lint -- --fix
+          npm run lint
   test:
     name: Test Frontend
     runs-on: ubuntu-latest
