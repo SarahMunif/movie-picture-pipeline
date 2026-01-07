@@ -54,8 +54,7 @@ jobs:
 
       - name: Run tests
         working-directory: starter/frontend
-        # This flag is used to prevent the pipeline from failing when no test files are found.
-        run: CI=true npm test -- --passWithNoTests
+        run: CI=true npm test 
   build:
     name: Build Frontend
     runs-on: ubuntu-latest
