@@ -1,0 +1,11 @@
+# Terraform generated files
+.terraform/
+terraform.tfstate
+terraform.tfstate.backup
+*.tfplan
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
+
