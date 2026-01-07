@@ -71,4 +71,9 @@ jobs:
         
      - name: Build Docker image
        working-directory: starter/backend
-       run: docker build -t mp-backend:ci .
+       # Fix for uWSGI build failure on Alpine Linux due to GCC 14+ strict type checking.
+       # Allowing the compiler to ignore uWSGI pointer type warnings
+       run: |
+         docker build \
+         --build-arg CFLAGS="-Wno-error=incompatible-pointer-types" \
+         -t mp-backend:ci .
