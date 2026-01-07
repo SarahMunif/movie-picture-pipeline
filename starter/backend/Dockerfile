@@ -2,7 +2,7 @@ FROM public.ecr.aws/docker/library/python:3.10-slim
 ENV FLASK_RUN_HOST=0.0.0.0
 
 WORKDIR /
-RUN adduser -u 1000 -D app
+RUN adduser -D -u 1000 app
 RUN apk update && \
   apk add \
   pcre \
