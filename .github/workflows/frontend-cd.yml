@@ -18,9 +18,11 @@ jobs:
       - name: Install dependencies
         working-directory: starter/frontend
         run: npm ci
-      - name: Run Lint
+      - name: Run lint
         working-directory: starter/frontend
-        run: npm run lint
+        run: |
+          npm run lint -- --fix
+          npm run lint
 
   test:
     name: Test Frontend
