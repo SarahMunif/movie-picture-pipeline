@@ -61,7 +61,7 @@ jobs:
       - name: Build, tag, and push image to Amazon ECR
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-          ECR_REPOSITORY: frontend 
+          ECR_REPOSITORY: mp-frontend 
           IMAGE_TAG: latest
           MOVIE_API_URL: http://aefe888f25371482e9641174c1062121-1960966480.us-east-1.elb.amazonaws.com
         working-directory: starter/frontend
